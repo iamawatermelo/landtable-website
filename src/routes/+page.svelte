@@ -37,7 +37,7 @@
     min-height: 100vh;
     padding: 2em;
     background:
-      url('$lib/assets/noise.svg?inline'),
+      url('$lib/assets/noise.svg'),
       linear-gradient(-35deg, #F8EEFF 0%, #BBBEFF 100%);
     border: 1em solid white;
     overflow: clip;
