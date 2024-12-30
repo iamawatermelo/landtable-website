@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <filter id='noiseFilter'>
+      <feTurbulence 
+        type='fractalNoise' 
+        baseFrequency='3.19' 
+        numOctaves='8'
+        stitchTiles='stitch'/>
+    </filter>
+    
+    <mask id="clip">
+      <rect width='100%' height='100%' filter='url(#noiseFilter)'/>
+    </mask>
+    
+    <linearGradient id="gradient" x1="0" x2="0.7" y1="0" y2="1">
+      <stop offset="0%" stop-color="#8087FF"/> 
+      <stop offset="100%" stop-color="#CE8EFF22"/> 
+    </linearGradient>
+  </defs>
+  
+  <rect width='100%' height='100%' fill='url(#gradient)' mask='url(#clip)'/>
+</svg>

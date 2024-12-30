@@ -1,0 +1,58 @@
+// Fonts
+
+@font-face {
+  font-family: 'Landtable Sans';
+  font-display: block;
+  src: url('$lib/LandtableSans.ttf'), local('Funnel Sans')
+}
+
+@font-face {
+  font-family: 'Landtable Sans Title';
+  font-display: block;
+  font-weight: bold;
+  src: url('$lib/LandtableSansTitle.otf')
+}
+
+:root {
+  --font-stack: 'Landtable Sans', 'Inter', system-ui, sans-serif;
+  --title-font-stack: 'Landtable Sans Title', 'Landtable Sans', 'Helvetica', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-stack);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--title-font-stack);
+  font-weight: bold;
+}
+
+// CSS resets
+
+body, html, p, h1, h2, h3, h4 {
+  padding: 0;
+  margin: 0;
+}
+
+a, a:visited {
+  color: inherit;
+  text-decoration: underline dotted;
+  
+  .arrow svg {
+    transition: transform 200ms;
+    margin-left: 0.2em;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+  
+  .arrow svg {
+    transform: translate(0.2em, -0.2em);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
