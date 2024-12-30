@@ -50,9 +50,6 @@
     @media screen and (min-width: 64em) {
       font-size: 1.2em;
       padding-left: 4em;
-    }
-    
-    @media screen and (min-width: 100em) {
       flex-direction: row;
     }
     
@@ -111,7 +108,6 @@
       @media screen and (min-width: 100em) {
         left: 4em;
         height: unset;
-        --scale-factor: 2;
       }
       
       .stack {
@@ -129,6 +125,9 @@
         
         @media screen and (min-width: 100em) {
           left: 0;
+        }
+        
+        @media screen and (min-width: 128em) {
           --scale-factor: 2;
         }
         
