@@ -8,14 +8,14 @@
 
 <div class="hero">
   <div class="hero-left">
-    <h1>Take back control<br>of your data.</h1>
+    <h1>Take back control<br /> of your data.</h1>
     <p class="hero-text">
       Migrate, update, visualise and automate your data with the Landtable Platform.
       Effortlessly.
     </p>
     
     <a href="https://github.com/iamawatermelo/landtable" class="hero-text">
-      Keep up with development on GitHub<span class="arrow"><Arrow /></span>
+      Keep up with development on GitHub <span class="arrow"><Arrow /></span>
     </a>
     
     <p>And, for Hack Clubbers, get a hosted Landtable instance for free. Launches mid-Feburary.</p>
@@ -35,13 +35,17 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 4em;
+    padding: 2em;
     background:
       url('$lib/assets/noise.svg?inline'),
       linear-gradient(-35deg, #F8EEFF 0%, #BBBEFF 100%);
-    border: 2em solid white;
+    border: 1em solid white;
     overflow: clip;
     gap: 4em;
+    
+    @media screen and (min-width: 32em) {
+      border-width: 2em;
+    }
     
     @media screen and (min-width: 64em) {
       font-size: 1.2em;
@@ -63,22 +67,45 @@
       max-width: min-content;
       gap: 2em;
       
+      br {
+        display: none;
+        
+        @media screen and (min-width: 48em) {
+          display: block;
+        }
+      }
+      
       h1 {
-        font-size: 4em;
+        font-size: 2em;
         letter-spacing: .05rem;
         width: max-content;
+        max-width: 100%;
       }
       
       .hero-text {
-        font-size: 1.5em;
+        font-size: 1.2em;
+      }
+      
+      @media screen and (min-width: 32em) {
+        h1 {
+          font-size: 4em;
+        }
+        
+        .hero-text {
+          font-size: 1.5em;
+        }
       }
     }
     
     .hero-right {
-      flex: 1 1 32em;
+      flex: 1 1 auto;
       width: 100%;
       position: relative;
-      height: 64em;
+      height: 16em;
+      
+      @media screen and (min-width: 48em) {
+        height: 32em;
+      }
       
       @media screen and (min-width: 100em) {
         left: 4em;
@@ -90,10 +117,14 @@
         position: absolute;
         top: 50%;
         left: 2em;
-        --scale-factor: 1.5;
+        --scale-factor: 0.7;
         
         transform: rotate3d(0.7, 0.5, -0.3, 0.1turn) scale(var(--scale-factor)) translateY(calc(-50% + 128px));
         transform-style: preserve-3d;
+        
+        @media screen and (min-width: 48em) {
+          --scale-factor: 1.2;
+        }
         
         @media screen and (min-width: 100em) {
           left: 0;
