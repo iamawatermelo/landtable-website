@@ -49,6 +49,7 @@
     
     @media screen and (min-width: 64em) {
       font-size: 1.2em;
+      padding-left: 4em;
     }
     
     @media screen and (min-width: 100em) {
