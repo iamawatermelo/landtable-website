@@ -1,10 +1,10 @@
-<svg xmlns='http://www.w3.org/2000/svg'>
+<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none">
   <defs>
     <filter id='noiseFilter'>
       <feTurbulence 
         type='fractalNoise' 
-        baseFrequency='3.19' 
-        numOctaves='8'
+        baseFrequency='0.89' 
+        numOctaves='3'
         stitchTiles='stitch'/>
     </filter>
     

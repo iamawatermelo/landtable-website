@@ -39,6 +39,7 @@
     background:
       url('$lib/assets/noise.svg'),
       linear-gradient(-35deg, #F8EEFF 0%, #BBBEFF 100%);
+    background-size: cover;
     border: 1em solid white;
     overflow: clip;
     gap: 4em;
