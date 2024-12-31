@@ -27,7 +27,24 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
-// CSS resets
+// Color theming
+
+body {
+  --bg-color: 255, 255, 255;
+  --fg-color: 0, 0, 0;
+  
+  background: rgb(var(--bg-color));
+  color: rgb(var(--fg-color));
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --fg-color: 234, 235, 255;
+    --bg-color: 20, 20, 23;
+  }
+}
+
+// Helpful defaults
 
 body, html, p, h1, h2, h3, h4 {
   padding: 0;
@@ -38,9 +55,20 @@ a, a:visited {
   color: inherit;
   text-decoration: underline dotted;
   
-  .arrow svg {
-    transition: transform 200ms;
-    margin-left: 0.2em;
+  .arrow {
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    
+    svg {
+      height: 1em;
+      transition: transform 200ms;
+      margin-left: 0.1em;
+      
+      path {
+        fill: rgb(var(--fg-color));
+      }
+    }
   }
 }
 
